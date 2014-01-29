@@ -21,11 +21,22 @@ public class App
     	//Creacion del indice invertido
     	InvertedIndex indice= new InvertedIndex(data);
     	
+    	//Impresion por partanlla del indice invertido
+    	System.out.println("----------- Indice Invertido ------------");
+    	System.out.println("");
+    	indice.mostrar();
+    	
     	//Consulta
     	String[] result = indice.get("music");
     	
     	//Resultado de la consulta
+    	
+    	System.out.println("----------- Longitud del verctor resultado ------------");
+    	System.out.println("");
     	System.out.println(result.length);
+    	
+    	System.out.println("----------- Vector Resultado ------------");
+    	System.out.println("");
     	System.out.println(Arrays.toString(result));
     }
 }

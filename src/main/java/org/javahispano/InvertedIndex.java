@@ -84,6 +84,8 @@ public class InvertedIndex {
 	
 	
 	public void mostrar(){
+		/**Muestra la informacion del indice invertido**/
+		
 		Enumeration<String> e=indice.keys();
 		while (e.hasMoreElements()){
 			String actual=e.nextElement();
