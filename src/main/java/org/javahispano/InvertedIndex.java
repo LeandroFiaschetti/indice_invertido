@@ -10,7 +10,6 @@ import java.util.Iterator;
 public class InvertedIndex {
 
 	private String[] data; //Lo uso para trabajar sin los signos de puntuación
-	private String[] dataOriginal;//Lo uso para devolver la cadena exacta con los signos de puntuacion
 	
 	private Hashtable<String,HashSet<Integer>> indice; //Utilizamos una estructura de hash ya que a travez de una funcion de hash podemos
 													   //recuperar rapidamente la palabra que estamos buscando lo que lo hace mas eficinete	
@@ -20,7 +19,6 @@ public class InvertedIndex {
 		
 		//Inicializacion de atributos
 		this.data=data;
-		this.dataOriginal=data;
 		indice=new Hashtable<String,HashSet<Integer>>();
 		
 		//Creacion del indice invertido en la estructura de hash
@@ -75,7 +73,7 @@ public class InvertedIndex {
 		Iterator<?> it=referencias.iterator();
 		int contador=0;
 		while(it.hasNext()){
-			result[contador]=dataOriginal[(Integer) it.next()];
+			result[contador]=data[(Integer) it.next()];
 			contador++;
 		}
 		
